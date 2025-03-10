@@ -64,9 +64,9 @@ return [
                 PDO::ATTR_TIMEOUT => 300, // 设置超时时间为 30 秒
             ]) : []),
             'pool' => [
-                'min_connections' => 1,
-                'max_connections' => 10,
-                'idle_timeout' => 60,
+                'min_connections' => 5,
+                'max_connections' => 20,
+                'idle_timeout' => 300,
             ],
         ],
 
