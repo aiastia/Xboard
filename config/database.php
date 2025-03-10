@@ -61,6 +61,7 @@ return [
             'options' => (extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
                 PDO::ATTR_PERSISTENT => false,
+                PDO::ATTR_TIMEOUT => 300, // 设置超时时间为 30 秒
             ]) : []),
             'pool' => [
                 'min_connections' => 1,
